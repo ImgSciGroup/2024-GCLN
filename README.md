@@ -11,10 +11,9 @@
 
 ### Train and Test
 
-```bash
 train_main.py
 
 
-## Contract us
+## Contact us
 If you have any problme when running the code, please do not hesitate to contact us. Thanks.
 E-mail: Lvzhiyong_fly@hotmail.com, hht_zsl@outlook.com Date: June 6, 2025
