@@ -27,7 +27,10 @@ class GCN(nn.Module):
         x12=torch.sigmoid(self.GCN_u12(x11,adj))
         x12=torch.cat((x11,x12),dim=1)
         l1 = self.liner1(x12)
+        
+        # Added in response to reviewer feedback: this line was previously omitted in the uploaded version.
         l1 = self.avg1(l1.unsqueeze(-1)).squeeze(-1)
+        
         x21=torch.sigmoid(self.GCN_u21(x12,adj))
         x22 =torch.sigmoid( self.GCN_u22(x21, adj))
         x22=torch.sigmoid(x11+x22*l1)
